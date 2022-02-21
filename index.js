@@ -1,18 +1,6 @@
-const fs = require ("fs")
-const x =  require("./second")
+const express=require("express")
+const app  = express()
 
-x.greet()
-console.log(x.people)
-
-console.log("Hi !!! HelloW")
-
-console.log(__dirname )
-
-fs.readFile("package.json","utf-8",function(err,data){
-  if(err)
-        console.log("error ..!!")
-   else
-        console.log(data)
+app.listen("8000",function(){
+    console.log("server started in port number 8000")
 })
-
-console.log("Code after file reading")
