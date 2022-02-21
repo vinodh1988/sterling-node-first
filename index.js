@@ -1,7 +1,12 @@
-const { response } = require("express")
+
+
 const express=require("express")
 const app  = express()
+const path =require("path")
 
+app.get("/home",function(request,response){
+    response.sendFile(path.join(__dirname,"public/index.html"))
+})
 app.get("/greet",function(request,response){
     response.send("How are you!!! Welcome!!!")
 })
