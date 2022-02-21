@@ -1,4 +1,8 @@
 const fs = require ("fs")
+const x =  require("./second")
+
+x.greet()
+console.log(x.people)
 
 console.log("Hi !!! HelloW")
 
