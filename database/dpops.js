@@ -7,3 +7,5 @@
          callback)
           }
         }
+
+module.exports = operations;
