@@ -9,7 +9,7 @@ const data=
      name:request.body.name,
      city:request.body.city
     }
-   dpops.insert(data.sno,data.name,data.city,function(err,data){
+   dbops.insert(data.sno,data.name,data.city,function(err,data){
        if(err)
          response.status(500).send("Unable to insert")
        else

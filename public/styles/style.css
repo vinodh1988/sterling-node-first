@@ -2,3 +2,12 @@ h1{
     background-color: yellowgreen;
     color: blue;
 }
+
+
+#form{
+    padding: 50px;
+}
+
+#form th, #form td{
+    padding: 5px;
+}
