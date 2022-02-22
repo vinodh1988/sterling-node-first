@@ -4,6 +4,7 @@ const path =require("path")
 
 app.use(express.static(path.join(__dirname,"public/styles")))
 app.use(express.static(path.join(__dirname,"public/scripts")))
+
 app.get("/home",function(request,response){
     response.sendFile(path.join(__dirname,"public/index.html"))
 })
