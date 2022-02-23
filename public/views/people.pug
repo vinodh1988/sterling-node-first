@@ -1,0 +1,20 @@
+html
+    link(rel="stylesheet",href="../style.css")
+    head
+        title pug document
+    body
+        h1 pug is working
+        div.table
+            table
+                thead
+                    th Sno
+                    th Name
+                    th City
+                tbody
+                    each x in people
+                        tr
+                            td= x.sno
+                            td= x.name
+                            td= x.city
+
+            h3.alert.alert-dark Programmed by #{programmer}

@@ -17,4 +17,13 @@ const data=
    })
 })
 
+route.get("/report",function(request,response){
+    dbops.getPeople(function(err,data){
+               if(err)
+                  response.send("Unable to load data")
+               else
+                  response.render("people",{people:data,programmer:"Joseph"})
+    })
+})
+
 module.exports = route
