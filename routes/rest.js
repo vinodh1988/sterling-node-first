@@ -11,4 +11,21 @@ route.get("/all",function(request,response){
     })
 })
 
+route.post("/add",function(request,response){
+    const data=
+        {
+         sno:request.body.sno,
+         name:request.body.name,
+         city:request.body.city
+        }
+       dbops.insert(data.sno,data.name,data.city,function(err,data){
+           if(err)
+             response.status(500).send("Unable to insert")
+           else
+             response.status(201).send("data Successfully inserted")
+       })
+    })
+
+
+
 module.exports = route;
