@@ -12,13 +12,14 @@ route.get("/all",function(request,response){
 })
 
 route.get("/all/:sno",function(request,response){
-    dbops.getPeople(function(err,data){
+    dbops.getPerson(request.params.sno,function(err,data){
         if(err)
             response.status(500).send("internal error")
         else
             response.json(data)
     })
 })
+
 
 route.post("/add",function(request,response){
     const data=
