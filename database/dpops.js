@@ -9,6 +9,10 @@
 
       getPeople: function(callback){
         connection.query("select * from people",callback)
+      },
+
+      getPerson: function(sno,callback){
+        connection.query("select * from people where sno=?",[sno],callback)
       }
     }
 
