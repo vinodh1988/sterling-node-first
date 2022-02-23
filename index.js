@@ -2,6 +2,7 @@ const express=require("express")
 const app  = express()
 const path =require("path")
 const people =require('./routes/people')
+const peopleapi =require('./routes/rest')
 
 app.use(express.static(path.join(__dirname,"public/styles")))
 app.use(express.static(path.join(__dirname,"public/scripts")))
@@ -13,6 +14,8 @@ app.set('views', path.join(__dirname, 'public/views'));//setting the path of tem
 app.set('view engine', 'pug'); //configuring view Engine
 
 app.use("/people",people)
+app.use("/peopleapi",peopleapi)
+
 app.get("/home",function(request,response){
     response.sendFile(path.join(__dirname,"public/index.html"))
 })
